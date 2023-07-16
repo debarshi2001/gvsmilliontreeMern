@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Chivo:wght@300&family=Comforter&family=Cookie&family=Rowdies:wght@300&family=Saira+Condensed:wght@100&display=swap');
+
+
+
+
+.main-body {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* border:1px solid black; */
+    padding: 15px;
+}
+
+.sub-body1 {
+    width: 90%;
+    border-right: 1px solid black;
+    padding: 30px;
+    margin-right: 5px;
+}
+
+.about,
+.mission,
+.vision h2 {
+    font-size:2rem;
+    font-family: 'Rowdies', cursive;
+}
+
+
+.line {
+    width: 35%;
+    height: 2px;
+    background: #33df08;
+}
+
+.body-text {
+    font-size: 20px;
+    font-family: 'Chivo', sans-serif;
+    font-style: bold;
+    list-style-type: square;
+}
+
+.sub-body2 {
+    /* border:1px solid black; */
+    width: 20%;
+    padding: 30px;
+    margin-left: 5px;
+}
+
+.frame h6 {
+    letter-spacing: 5px;
+    font-family: serif;
+    text-align: center;
+
+}
+
+.qoute { 
+    color: #33df08;
+    text-align: center;
+    font-size: 3rem;
+
+}
+
+
+@media screen and (max-width:600px) {
+    .main-body {
+        flex-direction: column;
+
+    }
+
+    .sub-body1 {
+        width: 100%;
+        border: none;
+    }
+
+    .about h2 {
+        font-size: 1rem;
+    }
+    .mission h2 {
+        font-size: 1rem;
+    }
+    .vision h2 {
+        font-size: 1rem;
+    }
+
+    .line {
+        width: 55%;
+    }
+
+    .body-text {
+        font-size: 15px;
+    }
+
+    .sub-body2 {
+        width: 100%;
+        padding: 30px;
+        margin-left: 5px;
+    }
+
+    .qoute {
+        padding: 5px;
+        font-size: 2rem;
+
+    }
+
+    
+}

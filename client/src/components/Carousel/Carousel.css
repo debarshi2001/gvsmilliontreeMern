@@ -1,0 +1,28 @@
+#carousel #image img{
+    height:500px;
+
+}
+
+@media screen and (max-width:600px) {
+
+    #carousel #image img{
+    height:300px;
+
+}
+}
+
+@media screen and (max-width:530px) {
+
+    #carousel #image img{
+    height:250px;
+
+}
+}
+
+@media screen and (max-width:350px) {
+
+    #carousel #image img{
+    height:100px;
+
+}
+}

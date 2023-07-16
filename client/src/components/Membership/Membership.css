@@ -1,0 +1,105 @@
+.membership_frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    padding: 20px;
+    background-color: rgb(104, 241, 235);
+    font-family: 'Acme', sans-serif;
+
+}
+
+.membership_frame h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(255, 0, 0)
+}
+
+.membership_frame h3 {
+    font-weight: lighter;
+}
+
+.membership_form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /* background-color:rgb(96, 198, 239); */
+}
+
+.membership_form input {
+    margin: 10px;
+    height: 40px;
+    border: solid black 1px;
+    border-radius: 2px;
+}
+
+.donation {
+    /* background-color: antiquewhite; */
+    padding: 10px;
+}
+
+.donation h6 {
+    font-style: italic;
+    color: #000;
+}
+
+.donation button {
+    margin: 5px;
+    border: solid grey 1px;
+}
+
+.donation input {
+    width: 40%;
+    margin: 5px;
+    border: solid grey 1px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.register {
+    width: 50%;
+    align-self: center;
+    text-transform: uppercase;
+    font-family: 'Chivo', sans-serif;
+}
+
+@media screen and (max-width:600px) {
+    .membership_frame {
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .membership_frame h3 {
+        font-size:20px;
+        text-align: center;
+    }
+
+    .membership_form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        /* background-color:rgb(96, 198, 239); */
+    }
+
+    .membership_form input {
+        margin: 10px;
+        height: 40px;
+        border: solid black 1px;
+        border-radius: 2px;
+    }
+
+    .donation {
+        /* background-color: antiquewhite; */
+        padding: 10px;
+    }
+    #payment_details{
+        flex-direction: column;
+    }
+    
+
+}
