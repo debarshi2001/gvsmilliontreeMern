@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 export default function Stats() {
     const [member, setMember] = useState();
     useEffect(() => {
-        axios.get('http://154.41.253.161:8000/get_stat').then((res)=>{
+        axios.get('https://154.41.253.161:8000/get_stat').then((res)=>{
             setMember(res.data)
         })
     },[])

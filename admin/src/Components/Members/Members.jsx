@@ -9,7 +9,7 @@ export default function Members() {
   const [item, setItem] = useState([])
   
   const getData = async () => {
-    const { data } = await axios.get('http://154.41.253.161:8000/fetch');
+    const { data } = await axios.get('https://154.41.253.161:8000/fetch');
     console.log(data)
     setItem(data)
   }

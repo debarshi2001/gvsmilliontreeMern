@@ -16,7 +16,7 @@ export default function Login() {
         setauthenticated(!authenticated)
         console.log(authenticated)
         localStorage.setItem("auth",authenticated);
-        navigate("/dashboard")
+        navigate("/")
     }
   };
 

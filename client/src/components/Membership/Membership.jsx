@@ -17,7 +17,7 @@ export default function Membership() {
     
     e.preventDefault();
     try {
-      await axios.post("http://154.41.253.161:8000/post", {
+      await axios.post("https://154.41.253.161:8000/post", {
         name, email, phone, amount
       }).then((response) => {
         toast.success(response.data, {

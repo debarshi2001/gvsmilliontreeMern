@@ -5,7 +5,7 @@ const app = express();
 app.use(cors());
 const mogoose = require('mongoose')
 const dotenv = require('dotenv')
-const { default: mongoose } = require('mongoose');
+// const mongoose = require('mongoose');
 const Membermodel = require('./member-model')
 
 
