@@ -16,9 +16,9 @@ export default function Footer() {
                         </a>
                     </span>
                     <span className='m-2'>
-                        <a href="tel:+919382230475">
+                        <a href="tel:+918597775837">
                             <i class="fa-solid fa-phone"></i>
-                            +91 9382230475
+                            +91 8597775837
                         </a>
                     </span>
                     <span className='m-2'>
@@ -56,7 +56,7 @@ export default function Footer() {
             </div>
             <div className="copyrights">
                 <span className=''>Copywirte <i class="fa fa-copyright" aria-hidden="true"></i> 2023 All rights Reserved by GVS Million Tree Club</span>
-                <span>Made with <i class="fa-solid fa-heart text-danger"></i> By Debarshi
+                <span>Made with <i class="fa-solid fa-heart text-danger"></i> By Debarshi Halder
                 </span>
             </div>
         </div>

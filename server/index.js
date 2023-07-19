@@ -8,7 +8,10 @@ const dotenv = require('dotenv')
 // const mongoose = require('mongoose');
 const Membermodel = require('./member-model')
 
-
+//----
+const https = require('https');
+const fs = require('fs');
+//---
 
 app.use(express.json())
 
@@ -75,7 +78,15 @@ app.get("/", (req, res) => {
     res.send("Backend is Online.")
 })
 
+// //----
+https.createServer({
+    cert: fs.readFileSync('./localhost.crt'),
+    key: fs.readFileSync('./localhost.key')
+}, app).listen(4000);
+console.log("Server listening on https://localhost:4000/");
 
-app.listen(8000, () => {
-    console.log("Backend server is running on 8000...")
-});
+
+// //----
+// app.listen(8000, () => {
+//     console.log("Backend server is running on 8000...")
+// });

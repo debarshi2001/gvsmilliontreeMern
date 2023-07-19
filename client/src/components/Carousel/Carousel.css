@@ -1,5 +1,5 @@
 #carousel #image img{
-    height:500px;
+    height:700px;
 
 }
 
@@ -22,7 +22,7 @@
 @media screen and (max-width:350px) {
 
     #carousel #image img{
-    height:100px;
+    height:250px;
 
 }
 }
