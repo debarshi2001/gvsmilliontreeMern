@@ -24,14 +24,14 @@
 @media screen and (max-width:550px) {
     .galary {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto ;
         justify-items: center;
 
     }
 
     .galary_image {
         padding: 2px;
-        height: 200px;
+        height: 150px;
     }
 
 }
