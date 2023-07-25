@@ -85,7 +85,8 @@ export default function Membership() {
           <div className="d-flex justify-content-between" id="payment_details" >
             <div className="container ">
               <p className='text-center text-primary'>Scan The QR Code and Complete your Donation</p>
-              <img src="./Photos/QR/PaytmQR.jpg" alt="" srcset="" width={200} />
+              <img src="./Photos/QR/PhonePayQR.jpg" alt="" srcset="" width={200} />
+              <p>PhonePayNo = 9733485837</p>
             </div>
             <div className="d-flex flex-column w-100 m-1">
               <p className='text-center text-primary'>Bank Details</p>
