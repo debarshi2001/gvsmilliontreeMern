@@ -9,10 +9,11 @@ export default function Footer() {
         <div>
             <div className="footer">
                 <div className="address">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m11!1m3!1d136.01045794517762!2d88.84825585039953!3d22.673233575503847!2m2!1f322.33570846651486!2f45!3m2!1i1024!2i768!4f35!5e1!3m2!1sen!2sin!4v1692890055710!5m2!1sen!2sin" width="250" height="200"  ></iframe>
                     <span className='m-2'>
                         <a href="https://www.google.com/maps/@22.6742018,88.8474459,3a,60y,330.94h,90t/data=!3m6!1e1!3m4!1syp50po_paVpXntSlGEArpg!2e0!7i13312!8i6656?entry=ttu" target="_blank" className='d-flex flex-column align-items-center text-center'>
-                            <i class="fa-solid fa-house"></i><br/>
-                            Gramin Vikash Society,Mirzapur,<br/>P.O-Basirhat College,P.S.-Basirhat,<br/>24 pgs(N),pin-743412,West Bengal,India
+                            <i class="fa-solid fa-house"></i><br />
+                            Gramin Vikash Society,Mirzapur,<br />P.O-Basirhat College,P.S.-Basirhat,<br />24 pgs(N),pin-743412,West Bengal,India
                         </a>
                     </span>
                     <span className='m-2'>

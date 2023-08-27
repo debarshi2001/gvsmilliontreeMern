@@ -85,7 +85,7 @@ export default function Membership() {
           <div className="d-flex justify-content-between" id="payment_details" >
             <div className="container ">
               <p className='text-center text-primary'>Scan The QR Code and Complete your Donation</p>
-              <img src="./Photos/QR/PhonePayQR.jpg" alt="" srcset="" width={200} />
+              <img src="./Photos/QR/BandhanBank.jpg" alt="" srcset="" width={200} />
               <p>PhonePayNo = 9733485837</p>
             </div>
             <div className="d-flex flex-column w-100 m-1">
@@ -96,7 +96,10 @@ export default function Membership() {
               <p>Name:Gramin Vikash Society</p>
 
             </div>
-
+          </div>
+          <div>
+            <label htmlFor=""><span style={{color:"red"}}>*</span>Please,upload the Screenshot of transaction details:</label>
+            <input type="file" name="" id="" required/>
           </div>
           <button type="submit" className='w-50 align-self-center border rounded border-2 border-warning p-2 fs-5' >Register</button>
         </form>
