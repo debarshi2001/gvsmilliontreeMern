@@ -11,7 +11,7 @@ function UploadPhotos() {
     const [allImages, setallImages] = useState(["image"])
 
     useEffect(() => {
-        axios.get('http://192.168.29.199:4001/get-image')
+        axios.get('http://154.41.253.161:4001/get-image')
             .then(res => {
                 setallImages(res.data.data)
             })
@@ -24,7 +24,7 @@ function UploadPhotos() {
         for (let index = 0; index < image.length; index++) {
             formData.append("image", image[index]);
         }
-        await axios.post('http://192.168.29.199:4001/upload-image',
+        await axios.post('http://154.41.253.161:4001/upload-image',
             formData,
             {
                 headers: { "Content-Type": "multipart/form-data" }

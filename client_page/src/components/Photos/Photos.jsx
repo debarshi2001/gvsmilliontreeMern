@@ -6,7 +6,7 @@ export default function Photos() {
   const [images, setImages] = useState(["images"]);
 
   useEffect(() => {
-    axios.get('http://192.168.29.199:4001/get-image')
+    axios.get('http://154.41.253.161:4001/get-image')
       .then(res => {
         setImages(res.data.data)
       })
@@ -20,7 +20,7 @@ export default function Photos() {
         {images.map(data => {
           return (
             <div className="galary_image">
-              <img src={`http://192.168.29.199:4001/` + data.image} alt="" srcset="" />
+              <img src={`http://154.41.253.161:4001/` + data.image} alt="" srcset="" />
             </div>
           )
         })}

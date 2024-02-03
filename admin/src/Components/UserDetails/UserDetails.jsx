@@ -9,7 +9,7 @@ function UserDetails() {
 
 
     const getData = async () => {
-        const { data } = await axios.get('http://192.168.29.199:4001/fetch');
+        const { data } = await axios.get('http://154.41.253.161:4001/fetch');
         console.log(data)
         setItem(data)
     }
