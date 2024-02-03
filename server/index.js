@@ -3,32 +3,28 @@ const cors = require("cors");
 const app = express();
 // CORS Defination
 app.use(cors());
-const mogoose = require('mongoose')
+app.set("view engine", "ejs")
+app.use(express.urlencoded({ extended: false }))
+const mongoose = require('mongoose')
 const dotenv = require('dotenv')
-// const mongoose = require('mongoose');
+app.use(express.static('uploads'));
 const Membermodel = require('./member-model')
-
-//----
 const https = require('https');
 const fs = require('fs');
-//---
-
 app.use(express.json())
-
 dotenv.config();
 
-mogoose
+mongoose
     .connect(process.env.MONGO_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true
 
     })
-    .then(() => console.log("DB connection succesful!"))
-    .catch((err) => console.log("Can not COnnect"))
+    .then(() => console.log("Connected to the DataBase"))
+    .catch((err) => console.log("Can not Connect"))
 
 // Member 
 app.all('/post', async (req, res) => {
-    console.log("inside all function")
     const id = await Membermodel.count();
     const data = new Membermodel({
         id: id ? id + 1 : 1,
@@ -71,22 +67,58 @@ app.get('/get_stat', async (req, res) => {
 
 
 
+// Image Upload and Retrive Functions..............................................
 
+require("./imageDetails");
+const Images = mongoose.model("ImageDetails")
+const multer = require('multer')
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, "uploads/");
+    },
+    filename: function (req, file, cb) {
+        const uniqueSuffix = Date.now();
+        cb(null, uniqueSuffix + file.originalname);
+    },
+})
 
+const upload = multer({ storage: storage })
+app.post("/upload-image", upload.array("image", 20), async (req, res) => {
+    const imageArray = req.files
+    try {
+        for (let index = 0; index < imageArray.length; index++) {
+            await Images.create({ image: imageArray[index].filename });
+        }
+        res.send("Photos Uploaded: " + imageArray.length)
+
+    } catch (error) {
+        res.send("Do not enter more than 20 Images!!")
+    }
+})
+
+app.get('/get-image', async (req, res) => {
+    try {
+        Images.find({}).then((data) => {
+            res.send({ status: "Ok", data: data });
+        })
+    } catch (error) {
+        res.json({ status: error })
+
+    }
+})
+// ......................................................................
 
 app.get("/", (req, res) => {
     res.send("Backend is Online.")
 })
 
-// //----
-https.createServer({
-    cert: fs.readFileSync('./localhost.crt'),
-    key: fs.readFileSync('./localhost.key')
-}, app).listen(4000);
-console.log("Server listening on https://localhost:4000/");
+//----
+// https.createServer({
+//     cert: fs.readFileSync('./localhost.crt'),
+//     key: fs.readFileSync('./localhost.key'),
+// }).listen(4001);
 
 
-// //----
-// app.listen(8000, () => {
-//     console.log("Backend server is running on 8000...")
-// });
+app.listen(4001, (req, res) => {
+    console.log(`Server is running on 4001`)
+})

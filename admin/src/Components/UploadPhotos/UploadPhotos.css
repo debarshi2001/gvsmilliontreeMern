@@ -1,0 +1,111 @@
+*{
+    text-decoration: none;
+    padding:0;
+    margin:0;
+}
+.PhotoUpload{
+    background-color:#283618;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content:center; */
+}
+.uploadImg{
+    display: flex;
+    flex-direction: column;
+    background-color: #FEFAE0;
+    width: 90%;
+    height: 20vh;
+    border-radius: 25px;
+    align-items: center;
+    justify-content:space-evenly;
+}
+.uploadImg h2{
+    color:#023246;
+}
+.uploadForm{
+    display:flex;
+    flex-direction:column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.uploadForm input{
+    /* padding: 10px; */
+    color:#023246;
+}
+
+.uploadForm button{
+    padding: 10px;
+    background-color:#C0EB6A;
+    border: none;
+    border-radius:5px;
+    font-size:1rem;
+    box-shadow: 2px 2px 9px .01px grey;
+}
+.uploadForm button:focus{
+    background-color: #ff6f3d;
+}
+
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .custom-file-input::before {
+    content: 'Select some images (Upto 20)';
+    display: inline-block;
+    /* background: linear-gradient(top, #f9f9f9, #e3e3e3); */
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    /* -webkit-user-select: none; */
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+  }
+  .custom-file-input:hover::before {
+    border-color: black;
+  }
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+
+  .showing{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .showing p{
+    color: white;
+    margin-top: 10px;
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .img_plate{
+    width: 90%;
+    margin-top:30px;
+    margin-bottom: 70px;
+    display:grid;
+    grid-template-columns:auto auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    row-gap: 5px;
+  }
+  .img_card{
+    border-radius: 2px;
+    width:100%;
+    height:100px;
+  }
+
+  .img_card img{
+    width: 100%;
+    height:100%;
+  }

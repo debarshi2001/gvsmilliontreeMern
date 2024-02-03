@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,200&family=Merienda:wght@700&display=swap');
+
+.Logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.heading {
+    font-family: 'Merienda', cursive;
+    font-size: 2rem;
+    color:#FEFAE0
+}
+
+.sub-heading{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2rem;
+    color:#DDA15E
+}

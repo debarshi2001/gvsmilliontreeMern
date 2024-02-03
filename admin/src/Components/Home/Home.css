@@ -1,6 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
 
-
-#body{
-    width: 100%;
-    
+.HomePanel{
+    background-color: #283618;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height:100vh;
+}
+.message{
+    color: #cb2e2e;
+    text-align: center;
+    font-style: italic;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

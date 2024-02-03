@@ -8,11 +8,12 @@ const MemberSchema = mongoose.Schema({
     },
     name: {
         type: String,
+        max: 20,
         required: true,
+        uppercase: true,
     },
     email: {
         type: String,
-
     },
     phone: {
         type: Number,
